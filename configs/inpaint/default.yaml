@@ -1,0 +1,10 @@
+resolution: 512
+train_batch_size: 2
+num_train_epochs: 250
+learning_rate: 1.0e-5
+gradient_accumulation_steps: 1
+mixed_precision: fp16
+num_train_timesteps: 1000
+beta_schedule: linear
+checkpointing_steps: 10000
+seed: 0

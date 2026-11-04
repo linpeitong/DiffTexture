@@ -1,0 +1,10 @@
+scale_factor: 5
+poisson_radius_mean: 33.0
+poisson_radius_std: 14.0
+poisson_radius_min: 15.0
+poisson_radius_max: 55.0
+poisson_candidates: 30
+vertex_radius_mean_scale: 0.75
+vertex_radius_std_scale: 0.25
+min_vertices: 5
+max_vertices: 10

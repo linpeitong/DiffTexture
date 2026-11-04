@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "If you use DiffTexture, please cite the accompanying manuscript."
+title: "DiffTexture"
+type: software
+version: 0.1.0
+authors:
+  - family-names: Lin
+    given-names: Peitong
