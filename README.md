@@ -1,23 +1,14 @@
 # DiffTexture
 
-DiffTexture is the code release for texton-controlled, pixel-space DDPM
-inpainting of pulmonary lesions with structural textures.
+DiffTexture is the code release for *DiffTexture: A texton-controlled inpainting framework for synthesizing pulmonary lesions with structural textures*.
 
-## Release scope
+## Framework
 
-This release contains three components:
+![Framework of DiffTexture](assets/figures/framework.png)
 
-1. `inpainting`: masked DDPM training and context-aware inpainting inference.
-2. `texton_control`: a frozen inpainting U-Net with a trainable, zero-initialized
-   spatial conditioning branch that receives a texton map.
-3. `procedural`: bottom-up texton-map synthesis using Poisson-disk anchors and
-   stochastic polygonal textons.
+## Visualization
 
-SAM-based pseudo-labeling, automatic lesion-mask generation, SAM texton-map
-extraction, medical images, pseudo labels, and experiment artifacts are **not
-included**. Training therefore expects pre-existing `image`, `mask`, and, for
-texton control, `texton_map` files. The repository does not prescribe how
-these inputs are obtained.
+![Visual comparison of DiffTexture](assets/figures/vis_comparison.png)
 
 ## Install
 
@@ -63,10 +54,3 @@ python scripts/infer_texton_control.py --image normal_ct.png --mask region.png \
 ```
 
 For the uncontrolled baseline, use `scripts/infer_ddpm_inpainting.py`.
-
-## Reproducibility and safety
-
-Procedural generation accepts a seed and writes sampled parameters alongside
-each output. Checkpoints are intentionally ignored by Git; distribute them
-separately with a checksum and model card. This code is a research artifact,
-not a clinical device.
